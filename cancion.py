@@ -12,3 +12,12 @@ class cancion:
 
     def establecerGenero(self, genero):
         self.genero = genero
+
+    def obtenerNombre(self):
+        return self.nombre
+    
+    def obtenerDuracion(self):
+        return self.duracion
+    
+    def obtenerGenero(self):
+        return self.genero
