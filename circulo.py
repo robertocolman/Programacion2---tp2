@@ -1,25 +1,22 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Aug 31 13:05:06 2025
-
-@author: nahva
-"""
-
-import math
-
 class Circulo:
-    PI = math.pi  
+    PI = 3.14159
 
     def __init__(self, radio: float):
-        self.radio = radio  # en centímetros
+        self.radio = radio
 
-    def diametro(self):
+
+    def establecerRadio(self, radio: float):
+        self.radio = radio
+
+
+    def obtenerRadio(self):
+        return self.radio
+
+    def obtenerDiametro(self):
         return self.radio * 2
+   
+    def obtenerArea(self):
+        return self.PI * (self.radio ** 2)
 
-    def perimetro(self):
+    def obtenerPerimetro(self):
         return 2 * self.PI * self.radio
-
-    def __eq__(self, other):
-        if isinstance(other, Circulo):
-            return self.radio == other.radio
-        return False
